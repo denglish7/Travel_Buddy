@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+        <title></title>
+        {% load staticfiles %}
+        <link rel="stylesheet" href="{% static 'login_reg_app/travel.css' %}" media="screen" title="no title"  charset="utf-8">
+    </head>
+    <body>
+        <div class="wrapper">
+            <form action="{% url 'travel_app:logoff' %}" method="post">
+                {% csrf_token %}
+                <input class="logout" type="submit" name="" value="Log off">
+            </form>
+            <div class="tables">
+                <h1>Hello, {{user.first_name}}!</h1>
+                <a id='add' href="{% url 'travel_app:add_page' %}">Add Travel Plan</a>
+                <h4>Your Trip Schedules</h4>
+                <div class="mytable">
+                    <table id='myPlans'>
+                        <tr>
+                            <th class='head'><div class='description'>Destination</div></th>
+                            <th class='head'><div class='description'>Travel Start Date</div></th>
+                            <th class='head'><div class='description'>Travel End Date</div></th>
+                            <th class='head'><div class='description'>Trip Plan</div></th>
+                        </tr>
+                            {% for plan in plans %}
+                                <tr>
+                                    <td>{{plan.destination}}</a></td>
+                                    <td>{{plan.travel_date_from}}</td>
+                                    <td>{{plan.travel_date_to}}</td>
+                                    <td><a href="{% url 'travel_app:my_show' id=plan.id %}">View Info</a></td>
+                                </tr>
+                            {% endfor %}
+                    </table>
+                </div>
+            </div>
+            <div class="tables" id='otherTable'>
+                <div class="otherTable">
+                    <h4>Other User's Travel Plans</h4>
+                    <table id='othersPlans'>
+                        <tr>
+                            <th>Name</th>
+                            <th>Destination</th>
+                            <th>Travel Start Date</th>
+                            <th>Travel End Date</th>
+                            <th>Do You Want to Join?</th>
+                        </tr>
+                        {% for plan in others_plans %}
+                        <tr>
+                            <td>{{plan.user_plans.first_name}}</td>
+                            <td><a href="{% url 'travel_app:my_show' id=plan.id %}">{{plan.destination}}</a></td>
+                            <td>{{plan.travel_date_from}}</td>
+                            <td>{{plan.travel_date_to}}</td>
+                            <td><a href="{% url 'travel_app:my_join' id=plan.id %}">Join</a></td>
+                        </tr>
+                        {% endfor %}
+                    </table>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

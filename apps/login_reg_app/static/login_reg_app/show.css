@@ -1,0 +1,52 @@
+body, html {
+    height: 100%;
+    margin: 0px auto;
+    padding: 0px auto;
+}
+
+
+.wrapper {
+    color: black;
+    height: auto;
+    min-height: 100%;
+    margin: 0px auto;
+    padding: 0px auto;
+    padding-top: 25px;
+    padding-left: 20px;
+    background-image: url('plane-50893_1280.jpg');
+}
+
+img {
+    height: 30%;
+    width: 30%;
+    display: inline-block;
+    vertical-align: top;
+    border: 1px solid black;
+}
+
+.content {
+    margin-top: 5px;
+}
+.info {
+    margin-left: 5%;
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.25);
+    border: 1px solid black;
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+.otherUsers {
+    margin-left: 10%;
+    display: inline-block;
+    vertical-align: top;
+    background-color: rgba(255, 255, 255, 0.25);
+    border: 1px solid black;
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+h1, h2 {
+    margin: 0;
+}

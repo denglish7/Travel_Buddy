@@ -1,0 +1,58 @@
+body, html {
+    height: 100%;
+    margin: 0px auto;
+    padding: 0px auto;
+}
+
+.wrapper {
+    color: black;
+    height: auto;
+    min-height: 100%;
+    margin: 0px auto;
+    padding: 0px auto;
+    padding-top: 25px;
+    padding-left: 20px;
+    background-image: url('plane-50893_1280.jpg');
+}
+
+.add {
+    background-color: rgba(255, 255, 255, 0.3);
+    width: 40%;
+    border: 1px solid black;
+    padding: 10px 10px 20px 25px;
+    margin: 10px 0px;
+    border-radius: 10px;
+}
+
+label {
+	display: inline-block;
+	width: 30%;
+	margin: 10px 10px 0 0;
+    color: black;
+}
+
+.logout {
+    margin: 10px 0;
+    width: 5%;
+}
+.button {
+    display: block;
+    width: 20%;
+    margin-top: 10px;
+}
+form {
+    width: 100%;
+    margin: 0px;
+}
+
+.addInput {
+	width: 50%;
+}
+
+#error {
+    color: black;
+    font-size: 16px;
+}
+h2 {
+    margin: 0;
+}

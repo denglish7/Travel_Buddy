@@ -1,0 +1,67 @@
+body, html {
+    height: 100%;
+    margin: 0px auto;
+    padding: 0px auto;
+}
+
+
+.wrapper {
+    height: auto;
+    min-height: 100%;
+    margin: 0px auto;
+    padding: 0px auto;
+    padding-top: 50px;
+    padding-left: 20px;
+    background-image: url('fiji-293826_1280.jpg');
+}
+
+
+#error {
+    color: black;
+    font-size: 14px;
+}
+
+.register {
+    background-color: rgba(255, 255, 255, 0.25);
+    width: 40%;
+    border: 1px solid black;
+    padding: 10px 10px 10px 25px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+h1 {
+    margin: 0px 0px 10px 0px;
+    color: black;
+}
+h2 {
+    width: 80%;
+    color: black;
+    margin: 0 0;
+    padding: 0 5px;
+}
+
+.button {
+    display: block;
+    width: 20%;
+    margin-top: 10px;
+}
+
+label {
+	display: inline-block;
+	width: 40%;
+	margin: 10px 10px 0 0;
+    color: black;
+}
+
+input {
+	width: 35%;
+}
+
+.login {
+    background-color: rgba(255, 255, 255, 0.25);
+    margin-top: 10px;
+    width: 40%;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px 10px 10px 25px;
+}

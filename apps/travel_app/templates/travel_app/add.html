@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+        <title></title>
+        {% load staticfiles %}
+        <link rel="stylesheet" href="{% static 'login_reg_app/add.css' %}"media="screen" title="no title"  charset="utf-8">
+    </head>
+    <body>
+        <div class="wrapper">
+            <form class="" action="{%url 'travel_app:logoff' %}" method="post">
+                {% csrf_token %}
+                <input class='logout' type="submit" name="" value="Log off">
+            </form>
+            <a href="{% url 'travel_app:index' %}">Back</a>
+            {% if messages %}
+                {% for message in messages %}
+                    <p id='error'>{{message}}</p>
+                {% endfor %}
+            {% endif %}
+            <div class="add">
+                <h2>Add a trip</h2>
+                <form action="{%url 'travel_app:add_trip' %}" method="post">
+                    {% csrf_token %}
+                    <label>Destination:</label>
+                    <input class='addInput' type="text" name="destination" value="">
+                    <label>Description:</label>
+                    <input class='addInput' type="text" name="description" value="">
+                    <label>Image url (optional):</label>
+                    <input class='addInput' type="text" name="image">
+                    <label>Travel Date From:</label>
+                    <input class='addInput' type="date" name="travel_date_from">
+                    <label>Travel Date To:</label>
+                    <input class='addInput' type="date" name="travel_date_to">
+                    <input class='button' type="submit" name="submit" value="Add">
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
