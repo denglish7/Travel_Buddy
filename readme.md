@@ -4,7 +4,13 @@ Travel Buddy is a trip planning site. It allows users to add and keep track of t
 
 ##How to use
 
-###Login page
-Users register and login to an account where they can add trips to the database and view them on them on the main page.
+###Home page
+* View trips they have added
+* View trips other users have added
+* Join a trip another user has added which will move that trip to the logged in users' trips.
 
-They can also view trips added by all other users and join those trips, which will add them to their own trips. Users can also click on individual trips which will direct them to another page that displays information for that particular trip.
+###Add page
+* Add a trip to the database with a destination, description, travel dates, and a image(optional).
+
+###Trip page
+* View individual trips where all the trip info for that trip will be displayed.
